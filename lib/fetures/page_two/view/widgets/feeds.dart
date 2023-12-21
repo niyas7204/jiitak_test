@@ -9,6 +9,7 @@ class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,6 +89,13 @@ class Feed extends StatelessWidget {
               itemBuilder: (context, index) => const FeedCard(),
               separatorBuilder: (context, index) => SpaceSized.space5w,
               itemCount: 4),
+        ),
+        SizedBox(
+          height: 150,
+        ),
+        GlobalTexts.labelText("株式会社パムローカルメディア"),
+        SizedBox(
+          height: 140,
         ),
       ],
     );
